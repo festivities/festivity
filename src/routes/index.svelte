@@ -29,7 +29,7 @@
     <meta property="og:url" content="https://festivity.pw/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="festivity">
-    <meta property="og:image" content="https://c.tenor.com/gQV5VzHLWQIAAAAd/among-us-sus.gif">
+    <meta property="og:image" content="https://i.imgur.com/SReyR4Z.jpg">
 </head>
 
 <Splash/>

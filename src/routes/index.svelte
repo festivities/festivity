@@ -24,12 +24,12 @@
 <head>
     <title>a little festive</title>
     
-    <meta property="og:title" content="festivity">
-    <meta property="og:description" content="a little festive">
-    <meta property="og:url" content="https://festivity.pw/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="festivity">
-    <meta property="og:image" content="https://i.imgur.com/SReyR4Z.jpg">
+    <meta property="og:title" content="festivity" />
+    <meta property="og:description" content="a little festive" />
+    <meta property="og:url" content="https://festivity.pw/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="festivity" />
+    <meta property="og:image" content="https://i.imgur.com/LFP6LSH.png" />
 </head>
 
 <Splash/>

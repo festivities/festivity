@@ -21,14 +21,22 @@
     onMount(() => ready = true);
 </script>
 
-<title>a little festive</title>
+<head>
+    <title>a little festive</title>
+    
+    <meta property="og:title" content="festivity">
+    <meta property="og:description" content="a little festive">
+    <meta property="og:url" content="https://festivity.pw/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="festivity">
+</head>
 
 <Splash/>
 
 {#if ready}
     <div transition:fade="{{delay: 2750, duration: 4000, easing: circOut}}" style="display: block; justify-content: center" class="profile">
         <div class="discord_card">
-            <a href="https://discord.com/users/176577264555786240"><img src="https://lanyard.cnrad.dev/api/176577264555786240?theme=light&bg=FBFBFB"></a>
+            <a href="https://discord.com/users/176577264555786240"><img src="https://lanyard.cnrad.dev/api/176577264555786240?theme=light&bg=FBFBFB" alt="Festivity"></a>
         </div>
         <div class="about_me">
             <p>I make stuff. I got into programming recently <br>so here I am, lol</p>

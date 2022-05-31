@@ -1,60 +1,113 @@
-<script context="module" lang="ts">
-	export const prerender = true;
+<script>
+    // global files
+    import css from '../styles/global.css';
+
+    // external modules
+    import Parallax from 'parallax-js'
+
+    // other components
+    import Splash from '../components/splash.svelte';
+
+    // transitions
+    import {fade} from 'svelte/transition';
+
+    // easing functions
+    import {circOut} from 'svelte/easing';
+
+    // things i copy pasted
+    import {onMount} from 'svelte';
+
+    let ready = false;
+    onMount(() => ready = true);
 </script>
 
-<script lang="ts">
-	import Counter from '$lib/Counter.svelte';
-</script>
+<title>a little festive</title>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
+<Splash/>
 
-<section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</div>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+{#if ready}
+    <div transition:fade="{{delay: 2750, duration: 4000, easing: circOut}}" style="display: block; justify-content: center" class="profile">
+        <div class="discord_card">
+            <a href="https://discord.com/users/176577264555786240"><img src="https://lanyard.cnrad.dev/api/176577264555786240?theme=light&bg=FBFBFB"></a>
+        </div>
+        <div class="about_me">
+            <p>I make stuff. I got into programming recently <br>so here I am, lol</p>
+        </div>
+        <div class="buttons">
+            <a href="https://github.com/Festivize" style="text-decoration:none">
+                <div class="btn">
+                    GitHub
+                </div>
+            </a>
+            <br>
+            <a href="https://twitter.com/Festivizing" style="text-decoration:none">
+                <div class="btn">
+                    Twitter
+                </div>
+            </a>
+            <br>
+            <a href="https://www.youtube.com/c/festivityy/" style="text-decoration:none">
+                <div class="btn">
+                    YouTube
+                </div>
+            </a>
+        </div>
+    </div>
+{/if}
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
+    :global(body){
+		background: linear-gradient(0deg, #e1e1e1, #e3e3e3, #e8e8e8, #eeeeee, #f4f4f4, #f9f9f9, #fbfbfb);
+        background-size: auto;
+        background-attachment: fixed;
+        height: 100%;
+    }
+    .profile{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
 
-	h1 {
-		width: 100%;
-	}
+        background-color: #FBFBFB;
+		animation: float 2.7s infinite;
+		box-shadow: 0px 20px 20px rgba(56, 56, 56, 0.306);
+		border-radius: 20px;
+    }
+    .discord_card{
+        pointer-events: none;
+    }
+    .about_me{
+        border-top: 3px dashed #e1e1e1;
 
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
+        display: block;
+        text-align: justify;
+        padding: 20px;
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
+        color: #777777;
+
+        font-family: Shippori Mincho;
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+    }
+    .buttons{
+        border-top: 3px dashed #e1e1e1;
+        padding: 20px;
+    }
+    .btn{
+        margin: auto;
+        text-align: center;
+        background-image: linear-gradient(to bottom, #FBFBFB, #F5F5F5);
+        border-radius: 4px;
+        font-family: Shippori Mincho;
+        color: #777777;
+        font-size: 20px;
+        padding: 10px 20px 10px 20px;
+        border: solid #e1e1e1 2px;
+        text-decoration: none;
+    }
+    .btn:hover{
+        background: #FBFBFB;
+        text-decoration: none;
+    }
 </style>

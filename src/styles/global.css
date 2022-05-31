@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+
+@keyframes fadeInfadeOut{
+	0%{
+		opacity: 0;
+        animation-timing-function: cubic-bezier(0.25, 1.0, 1.0, 1.0);
+	}
+    40%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 1;
+	}
+    60%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+        animation-timing-function: cubic-bezier(0.01, 1.0, 1.0, 1.0);
+	}
+}

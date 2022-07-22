@@ -41,7 +41,7 @@
         </div>
         <div class="about_me">
             <p>I make stuff. I got into programming recently <br>so here I am, lol<br><br>
-			contact: festivity@riseup.net</p>
+			<b>contact:</b> festivity@riseup.net</p>
         </div>
         <div class="buttons">
             <a href="https://github.com/Festivize" style="text-decoration:none">

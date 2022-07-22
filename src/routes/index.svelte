@@ -29,7 +29,7 @@
     <meta property="og:url" content="https://festivity.pw/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="festivity" />
-    <meta property="og:image" content="https://i.imgur.com/LFP6LSH.png" />
+    <meta property="og:image" content="https://i.imgur.com/EPzkp45.png" />
 </head>
 
 <Splash/>
@@ -40,7 +40,8 @@
             <a href="https://discord.com/users/176577264555786240"><img src="https://lanyard.cnrad.dev/api/176577264555786240?theme=light&bg=FBFBFB" alt="Festivity"></a>
         </div>
         <div class="about_me">
-            <p>I make stuff. I got into programming recently <br>so here I am, lol</p>
+            <p>I make stuff. I got into programming recently <br>so here I am, lol<br><br>
+			contact: festivity@riseup.net</p>
         </div>
         <div class="buttons">
             <a href="https://github.com/Festivize" style="text-decoration:none">

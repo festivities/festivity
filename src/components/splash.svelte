@@ -15,10 +15,11 @@
         top: 45%;
         transform: translate(-50%, -50%);
 
-        font-family: Shippori Mincho;
+        font-family: 'Inter Tight', sans-serif;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 200;
         font-display: swap;
         font-size: 46px;
+        letter-spacing: 0.04em;
     }
 </style>

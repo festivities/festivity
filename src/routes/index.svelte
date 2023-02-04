@@ -15,10 +15,25 @@
     import {circOut} from 'svelte/easing';
 
     // things i copy pasted
-    import {onMount} from 'svelte';
+    import {onMount, tick} from 'svelte';
 
     let ready = false;
-    onMount(() => ready = true);
+    let parallaxInstance;
+    let backgroundparallaxInstance;
+    let backgroundMusic;
+
+    onMount(async() => {
+        ready = true;
+        await tick();
+
+        const scene = document.getElementById('scene');
+        const background = document.getElementById('background');
+        parallaxInstance = new Parallax(scene);
+        backgroundparallaxInstance = new Parallax(background);
+
+        backgroundMusic = new Audio('https://github.com/festivize/festivity/blob/main/static/background.ogg?raw=true');
+        backgroundMusic.volume = 0.1; backgroundMusic.loop = true; backgroundMusic.play();
+    });
 </script>
 
 <head>
@@ -35,32 +50,37 @@
 <Splash/>
 
 {#if ready}
-    <div transition:fade="{{delay: 2750, duration: 4000, easing: circOut}}" style="display: block; justify-content: center" class="profile">
-        <div class="discord_card">
-            <a href="https://discord.com/users/176577264555786240"><img src="https://lanyard.cnrad.dev/api/176577264555786240?theme=light&bg=FBFBFB" alt="festivity"></a>
-        </div>
-        <div class="about_me">
-            <p>I'm simply someone festive.<br><br>
-			<b>contact:</b> festivity@firemail.cc</p>
-        </div>
-        <div class="buttons">
-            <a href="https://github.com/festivize" style="text-decoration:none">
-                <div class="btn">
-                    GitHub
-                </div>
-            </a>
-            <br>
-            <a href="https://twitter.com/festivizing" style="text-decoration:none">
-                <div class="btn">
-                    Twitter
-                </div>
-            </a>
-            <br>
-            <a href="https://www.youtube.com/c/festivityy/" style="text-decoration:none">
-                <div class="btn">
-                    YouTube
-                </div>
-            </a>
+    <div id="background" transition:fade="{{delay: 2750, duration: 4000, easing: circOut}}" class="parallax">
+        <div data-depth="0.05" class="bg"></div>
+    </div>
+    <div id="scene" transition:fade="{{delay: 2750, duration: 4000, easing: circOut}}" class="parallax">
+        <div data-depth="0.2" class="profile">
+            <div class="discord_card">
+                <a href="https://discord.com/users/176577264555786240"><img src="https://lanyard.cnrad.dev/api/176577264555786240?theme=light&bg=FBFBFB" alt="festivity"></a>
+            </div>
+            <div class="about_me">
+                <p>Nothing to see here, friend.<br><br>
+                <b>Contact:</b> festivity@firemail.cc</p>
+            </div>
+            <div class="buttons">
+                <a href="https://github.com/festivize" target="_blank" style="text-decoration:none">
+                    <div class="btn">
+                        GitHub
+                    </div>
+                </a>
+                <br>
+                <a href="https://twitter.com/festivizing" target="_blank" style="text-decoration:none">
+                    <div class="btn">
+                        Twitter
+                    </div>
+                </a>
+                <br>
+                <a href="https://www.youtube.com/c/festivityy/" target="_blank" style="text-decoration:none">
+                    <div class="btn">
+                        YouTube
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 {/if}
@@ -71,13 +91,27 @@
         background-size: auto;
         background-attachment: fixed;
         height: 100%;
+        overflow: hidden;
     }
-    .profile{
+    .bg{
+        height: 150vh !important;
+        background: linear-gradient(0deg, #e1e1e1, #e3e3e3, #e8e8e8, #eeeeee, #f4f4f4, #f9f9f9, #fbfbfb);   
+        content: url("https://raw.githubusercontent.com/festivize/festivity/main/static/background.webp") !important;
+        filter: grayscale(50%);
+        opacity: 0.5;
+    }
+    .parallax{
+        display: block;
+        justify-content: center;
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
-
+        transform: translate(-50%, -50%) !important;
+    }
+    .profile{
+        position: relative !important;
+        left: -80% !important;
+        top: 50% !important;
         background-color: #FBFBFB;
 		animation: float 2.7s infinite;
 		box-shadow: 0px 20px 20px rgba(56, 56, 56, 0.306);
@@ -118,9 +152,17 @@
         text-decoration: none;
         letter-spacing: 0.04em;
         font-weight: 400;
+        pointer-events: auto !important;
     }
     .btn:hover{
         background: #FBFBFB;
         text-decoration: none;
     }
+
+    @media only screen and (max-width: 767px){
+    .profile{
+        left: 0% !important;
+        top: 50% !important;
+    }
+  }
 </style>

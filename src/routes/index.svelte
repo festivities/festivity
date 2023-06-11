@@ -41,7 +41,7 @@
     
     <meta property="og:title" content="festivity" />
     <meta property="og:description" content="a little festive" />
-    <meta property="og:url" content="https://festivity.pw/" />
+    <meta property="og:url" content="https://festivity.codes/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="festivity" />
     <meta property="og:image" content="https://i.imgur.com/EPzkp45.png" />
@@ -56,10 +56,10 @@
     <div id="scene" transition:fade="{{delay: 2750, duration: 4000, easing: circOut}}" class="parallax">
         <div data-depth="0.2" class="profile">
             <div class="discord_card">
-                <a href="https://discord.com/users/176577264555786240"><img src="https://lanyard.cnrad.dev/api/176577264555786240?theme=light&bg=FBFBFB" alt="festivity"></a>
+                <a href="https://discord.com/users/176577264555786240"><img src="https://lanyard.cnrad.dev/api/176577264555786240?theme=light&bg=FBFBFB&hideDiscrim=true" alt="festivity"></a>
             </div>
             <div class="about_me">
-                <p>Nothing to see here, friend.<br><br>
+                <p>An artist, a programmer ————<br>a student with insatiable curiosity.<br><br>
                 <b>Contact:</b> festivity@firemail.cc</p>
             </div>
             <div class="buttons">

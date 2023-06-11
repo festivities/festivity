@@ -21,5 +21,7 @@
         font-display: swap;
         font-size: 46px;
         letter-spacing: 0.04em;
+
+        user-select: none;
     }
 </style>

@@ -63,7 +63,7 @@
                 <b>Contact:</b> festivity@firemail.cc</p>
             </div>
             <div class="buttons">
-                <a href="https://github.com/festivize" target="_blank" style="text-decoration:none">
+                <a href="https://github.com/festivities" target="_blank" style="text-decoration:none">
                     <div class="btn">
                         GitHub
                     </div>

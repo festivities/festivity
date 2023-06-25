@@ -75,9 +75,9 @@
                     </div>
                 </a>
                 <br>
-                <a href="https://www.youtube.com/c/festivityy/" target="_blank" style="text-decoration:none">
+                <a href="https://festivity.carrd.co/" target="_blank" style="text-decoration:none">
                     <div class="btn">
-                        YouTube
+                        Carrd
                     </div>
                 </a>
             </div>

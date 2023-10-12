@@ -60,7 +60,7 @@
             </div>
             <div class="about_me">
                 <p>An artist, a programmer ————<br>a student with insatiable curiosity.<br><br>
-                <b>Contact:</b> festivize@proton.me</p>
+                <b>Contact:</b> festivizing@gmail.com</p>
             </div>
             <div class="buttons">
                 <a href="https://github.com/festivities" target="_blank" style="text-decoration:none">

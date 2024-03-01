@@ -56,11 +56,12 @@
     <div id="scene" transition:fade="{{delay: 2750, duration: 4000, easing: circOut}}" class="parallax">
         <div data-depth="0.2" class="profile">
             <div class="discord_card">
-                <a href="https://discord.com/users/176577264555786240"><img src="https://lanyard.cnrad.dev/api/176577264555786240?theme=light&bg=FBFBFB&hideDiscrim=true" alt="festivity"></a>
+                <a href="https://discord.com/users/176577264555786240" target="_blank"><img src="https://lanyard.cnrad.dev/api/176577264555786240?theme=light&bg=FBFBFB&hideDiscrim=true" alt="festivity"></a>
             </div>
             <div class="about_me">
-                <p>An artist, a programmer ————<br>a student with insatiable curiosity.<br><br>
-                <b>Contact:</b> festivizing@gmail.com</p>
+                <p class="prevent-select">A festivity with insatiable curiosity.<br><br>
+                <b>Contact:</b> <a href="mailto:festivizing@gmail.com" style="text-decoration: none; color: inherit;">festivizing@gmail.com</a><br></p>
+                <p><u><b><a href="https://discord.gg/85rP9SpAkF" target="_blank" style="text-decoration: none; color: inherit;">Discord server</a></b></u></p>
             </div>
             <div class="buttons">
                 <a href="https://github.com/festivities" target="_blank" style="text-decoration:none">
@@ -69,15 +70,21 @@
                     </div>
                 </a>
                 <br>
-                <a href="https://twitter.com/festivizing" target="_blank" style="text-decoration:none">
-                    <div class="btn">
-                        Twitter
-                    </div>
-                </a>
-                <br>
                 <a href="https://festivity.carrd.co/" target="_blank" style="text-decoration:none">
                     <div class="btn">
                         Carrd
+                    </div>
+                </a>
+                <br>
+                <a href="https://paypal.me/festivize" target="_blank" style="text-decoration:none">
+                    <div class="btn">
+                        PayPal.Me
+                    </div>
+                </a>
+                <br>
+                <a href="https://ko-fi.com/festivity" target="_blank" style="text-decoration:none">
+                    <div class="btn">
+                        Ko-fi
                     </div>
                 </a>
             </div>
@@ -118,7 +125,7 @@
 		border-radius: 20px;
     }
     .discord_card{
-        pointer-events: none;
+        pointer-events: all;
     }
     .about_me{
         border-top: 3px dashed #e1e1e1;
@@ -126,6 +133,8 @@
         display: block;
         text-align: justify;
         padding: 20px;
+        
+        pointer-events: all;
 
         color: #777777;
 
@@ -135,6 +144,11 @@
         font-display: swap;
         letter-spacing: 0.04em;
     }
+    .prevent-select{
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
     .buttons{
         border-top: 3px dashed #e1e1e1;
         padding: 20px;
@@ -143,12 +157,12 @@
         margin: auto;
         text-align: center;
         background-image: linear-gradient(to bottom, #FBFBFB, #F5F5F5);
-        border-radius: 4px;
+        border-radius: 20px;
         font-family: 'Inter Tight', sans-serif;
         color: #777777;
-        font-size: 20px;
-        padding: 10px 20px 10px 20px;
-        border: solid #e1e1e1 2px;
+        font-size: 19px;
+        padding: 5px 20px 5px 20px;
+        border: groove #e1e1e1 2px;
         text-decoration: none;
         letter-spacing: 0.04em;
         font-weight: 400;
